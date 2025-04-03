@@ -1,0 +1,6 @@
+# .gitignore
+node_modules/
+output.css
+input.css
+.env
+.DS_Store
