@@ -4,7 +4,7 @@
 <p class="w-full text-base text-yellow-300 mb-4">START TO SUCCESS</p>
 <h2 class=" text-3xl text-white mb-4">Access To 5000+ Courses
 from 300 Instructors 
-& Institutions</h2>
+& Institutions.</h2>
 <p class="text-xs text-gray-400 mb-4">Various versions have evolved over the years, sometimes by accident,</p>
 <div class="flex gap-2 w-full">
       <input type="text" placeholder="What do want to learn?"  class="flex-1 px-4 focus:outline-none py-2 bg-white rounded-lg">
