@@ -6,8 +6,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="output.css">
   </head>
-  <body class="bg-gray-200">
-    <header class="font-mono bg-indigo-500 text-lg">
+  <body class="font-mono bg-gray-200">
+    <header class=" bg-indigo-500 text-lg">
 <nav class="w-11/12 fixed mb-2  text-white text-lg font-semibold m-auto md:px-6 py-4 flex items-center justify-between">
 <h1 class="flex "><img src="img/logo.svg" alt=""><span class="text-3xl">Educ</span></h1>
 <ul class="flex gap-12 justify-between">

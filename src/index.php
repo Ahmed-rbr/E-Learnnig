@@ -18,5 +18,39 @@ from 300 Instructors
   </div>
 </div>
 </header>
-<main></main>
+<main class="bg-gray-200 bg-white">
+<div class="w-4/5 text-sm p-4 gap-12 m-auto flex justify-center items-center">
+
+<div class="flex gap-2  items-center">
+<img  class="w-16" src="img/grdut.svg" alt="">
+<div class="flex flex-col ">
+      <p class="text-xl font-semibold ">300</p>
+      <p class="text-gray-500">Instructor</p>
+    </div>
+  </div>
+  <div class="flex gap-2  items-center">
+<img  class="w-16" src="img/people.svg" alt="">
+<div class="flex flex-col ">
+      <p class="text-xl font-semibold ">20,000+</p>
+      <p class="text-gray-500">Student</p>
+    </div>
+  </div><div class="flex gap-2  items-center">
+<img  class="w-16" src="img/camera.svg" alt="">
+<div class="flex flex-col ">
+      <p class="text-xl font-semibold ">10,000</p>
+      <p class="text-gray-500">Video</p>
+    </div>
+  </div>
+  <div class="flex gap-2  items-center">
+  <img  class="w-16" src="img/ble prpo.svg" alt="">
+  <div class="flex flex-col ">
+      <p class="text-xl font-semibold ">100,000+</p>
+      <p class="text-gray-500">User's</p>
+    </div>
+  </div>
+ 
+</div>
+
+
+</main>
 <?php include 'footer.php'; ?>
