@@ -23,7 +23,7 @@
 
 
 </ul><div class="hidden menu2 md:flex   gap-4">
-<button class="hover:bg-white hover:text-black text-base rounded-3xl transition hover:cursor-pointer duration-200 ease-out bg-yellow-300 px-4 py-2">Sign up</button>
+<button class="hover:bg-white hover:text-black text-base rounded-3xl transition hover:cursor-pointer duration-200 ease-out bg-yellow-300 px-4 py-2"><a href="sign_up.php">Sign up</a></button>
 </div>
 </nav>
 

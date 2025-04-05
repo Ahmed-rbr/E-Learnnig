@@ -8,7 +8,7 @@ from 300 Instructors
 <p class="text-xs text-gray-400 mb-4">Various versions have evolved over the years, sometimes by accident,</p>
 <div class="flex gap-2 relative w-full">
       <input  type="text" placeholder="What do want to learn?"  class="flex-1  px-4 focus:outline-none py-2 bg-white rounded-lg">
-      <button class="p-2 bg-yellow-300 absolute to-0% right-1 rounded-lg">
+      <button class="p-2 bg-yellow-300 absolute top-0% right-1 rounded-lg">
         <img src="img/MagnifyingGlass.svg" alt="Search" class="w-6 h-6">
       </button>
     </div>
@@ -52,7 +52,10 @@ from 300 Instructors
 </div>
 
 <div class="w-full  bg-amber-50 p-6 ">
+<h2 class="self-start font-bold my-4 text-2xl text-purple-600">Most Popular Course:</h2>
+
 <div class="w-11/12 flex-wrap flex gap-4 justify-center m-auto items-center ">
+
 <div class="p-4 bg-white rounded-2xl  transition-all duration-300  hover:shadow-2xl scale-3d transform-3d hover:scale-105 ">
 <div class="w-full relative rounded-3xl ">
  <img class="w-full mb-2 rounded-3xl" src="img/Rectangle 9 (1).png" alt="">
