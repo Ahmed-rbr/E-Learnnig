@@ -42,7 +42,8 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
       }
       checkUsername($username,$errors);
 function confirmPwd($pwd,$pwd_check,&$errors){
-
+if($pwd<8){  $errors[]= "password must be at least 8 characters long";
+}
 if($pwd!==$pwd_check){
   $errors[]= "You must enter the same password";
 
