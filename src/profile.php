@@ -1,3 +1,13 @@
+<?php 
+session_start();
+$user=$_SESSION['user']??'';
+
+?>
+<?php 
+
+if($user){
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +28,12 @@
 <li class="gap-1 items-center hover:cursor-pointer transition duration-100 hover:text-blue-300  text-4xl md:text-xl flex"><i class="fa-solid fa-book"></i><a class="hidden md:block" href="index.php">Courses</a></li>
 <li class="gap-1 items-center hover:cursor-pointer transition duration-100 hover:text-blue-300  text-4xl md:text-xl flex"><i class="fa-solid fa-bookmark"></i><a class="hidden md:block" href="index.php">Bookmark</a></li>
 <li class="mb-24 gap-1 items-center hover:cursor-pointer transition duration-100 hover:text-blue-300  text-4xl md:text-xl flex"><i class="fa-solid fa-gear"></i><a class="hidden md:block" href="index.php">Settings</a></li>
-<li class="gap-1 items-center hover:cursor-pointer transition duration-100 hover:text-blue-300 text-4xl md:text-xl flex"><i class="fa-solid fa-right-from-bracket"></i><a class="hidden md:block" href="logout.php">Log Out</a></li>
+<li class="gap-1 items-center hover:cursor-pointer transition duration-100 hover:text-blue-300 text-4xl md:text-xl flex"><i class="fa-solid fa-right-from-bracket"></i>
+<form action="logout.php"><button><a class="hidden md:block" href="logout.php">Log Out</a>
+</button></form>
+
+
+</li>
 </ul>
 </div>
 
@@ -38,14 +53,14 @@
 </div>
 
 <div class="flex text-gray-300 font-medium flex-col items-center gap-1.5">
-  <p class="text-white">Ahmed rabar</p>
+  <p class="text-white"><?= $user['username']?></p>
   <p >Student</p>
   
 </div>
 <div class="">
   <label class="flex text-white flex-col gap-1.5 items-center">
     Sexe:
-    <p class="text-gray-300">Male</p>
+    <p class="text-gray-300"><?php $user['sexe'] ??'' ?></p>
   </label></div>
 <div class="">
   <label class="flex text-white flex-col gap-1.5 items-center">
@@ -66,3 +81,7 @@
 
   
 <?php include 'footer.php'; ?>
+<?php } else{
+
+  header('Location: index.php');
+} ?>

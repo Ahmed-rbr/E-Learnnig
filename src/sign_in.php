@@ -1,3 +1,13 @@
+<?php
+session_start();
+$errors=[];
+if(isset($_SESSION['errors'])&& !empty($_SESSION['errors'])){
+  $errors=$_SESSION['errors'];}
+  
+  $email=$_SESSION['email']??"";
+  unset($_SESSION['email']);
+  unset($_SESSION['errors']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +22,17 @@
 
 <div class="w-full md:w3/5 border-2 border-b-black px-2 py-4 rounded-2xl shadow-2xl m-auto flex items-center flex-col">
 <h1 class="mb-4 font-bold text-gray-900 text-2xl ">Sign in</h1>
+<ul>
+  <?php foreach ($errors as $error) { ?>
 
-<form class="sm:w-11/12 w-full flex  flex-col px-2 " action="">
+<li class="text-red-300"><?=htmlspecialchars($error)??'' ?></li>
+<?php } ?></ul>
+<form class="sm:w-11/12 w-full flex  flex-col px-2" method="post" action="signin.php">
 
-<label class="flex relative gap-1 mb-4 flex-col" for="email">Email:
+<label class="flex relative gap-1 mb-4 flex-col"  for="email">Email:
   <img class="w-4 absolute left-1.5  top-11" src="img/ff.png" alt="">
 
-  <input type="email" name="email" class="px-8 rounded-2xl  py-2 focus:outline-0 border border-gray-400" id="email" placeholder="Enter your email....">
+  <input type="email" name="email" value="<?php $email??'' ?>" class="px-8 rounded-2xl  py-2 focus:outline-0 border border-gray-400" id="email" placeholder="Enter your email....">
 </label>
 <label class="flex relative gap-1 mb-4 flex-col" for="pwd">Password:  
   <img class="w-3 absolute left-1.5  top-10" src="img/Vector.png" alt="">
