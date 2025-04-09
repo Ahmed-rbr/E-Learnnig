@@ -1,3 +1,8 @@
+<?php  session_start();
+
+$user=$_SESSION['user']??'';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +28,16 @@
 
 
 </ul>
-<div class="hidden menu2 md:flex gap-4">
-<button class="hover:bg-white hover:text-black text-base rounded-3xl transition hover:cursor-pointer duration-200 ease-out bg-yellow-300 px-4 py-2"><a href="sign_up.php">Sign up</a></button>
+<?php if($user){ ?>
+  <button class="hover:bg-white hidden md:flex menu2 hover:text-black text-base rounded-2xl transition hover:cursor-pointer duration-200 ease-out bg-white px-2 py-1"><a  class="flex gap-2" href="profile.php"><img class="h-8 w-8 objict-cover  rounded-full" src="<?=$user['avatar']?>" alt=""> <p class="text-xl text-black  uppercase"><?=$user['username'][0]?></p></a></button>
+
+<?php }else{?>
+  <div class="hidden menu2 md:flex gap-4">
+
+<button class="hover:bg-white hover:text-black text-base rounded-3xl transition hover:cursor-pointer duration-200 ease-out bg-yellow-300 px-4 py-2"><a href="sign_in.php">Sign in</a></button>
 </div>
+<?php } ?>
+
 </nav>
 
     
